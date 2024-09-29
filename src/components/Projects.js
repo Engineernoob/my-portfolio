@@ -8,7 +8,7 @@ const Projects = () => {
       description: "A portfolio website inspired by Visual Studio Code's interface.",
       technologies: ["React", "Tailwind CSS"],
       github: "https://github.com/yourusername/vscode-portfolio",
-      demo: "https://your-portfolio-url.com"
+      demo: "https://codewitht24.netlify.app/"
     },
     {
       title: "AI Personal Assistant",
