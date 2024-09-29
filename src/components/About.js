@@ -1,34 +1,22 @@
 import React from "react";
 
-const About = () => {
+function About({ theme }) {
   return (
-    <div className="text-[#d4d4d4]">
-      <h2 className="text-3xl font-bold mb-4 text-[#ff6b6b]">About Me</h2>
+    <div className={`p-6 ${theme === 'dark' ? 'text-[#d4d4d4]' : 'text-[#333333]'}`}>
+      <h2 className="text-2xl font-bold mb-4">About Me</h2>
       <p className="mb-4">
-        Hi, I'm Taahirah Denmark, an aspiring AI/ML Engineer with a strong
-        foundation in software development and a passion for pushing the
-        boundaries of technology. With over 4 years of experience in building
-        scalable, user-centered applications, I’m constantly seeking
-        opportunities to innovate and apply cutting-edge AI technologies to
-        real-world problems.
+        // Add a more personal and engaging description
+        Hi there! I'm a passionate web developer with a love for creating 
+        intuitive and visually appealing user interfaces. My journey in 
+        tech started with...
       </p>
-      <p className="mb-4">
-        Currently, I’m pursuing a degree in Computer Science while working on
-        exciting projects that blend AI and machine learning into intuitive
-        solutions. My recent work includes developing an AI-powered personal
-        assistant and experimenting with natural language processing models.
-      </p>
-      <p>
-        When I’m not coding, you can find me exploring the latest advancements
-        in AI, reading up on emerging technologies, or working on personal
-        projects that blend creativity with code. I also enjoy playing video
-        games, which fuels my interest in game development and AI-driven
-        experiences. I believe in continuous learning and am always excited to
-        take on new challenges in both AI/ML and web development to push the
-        boundaries of what’s possible.
-      </p>
+      // Consider adding a skills section with progress bars or tags
+      <div className="mt-6">
+        <h3 className="text-xl font-semibold mb-2">Skills</h3>
+        // Add skill tags or progress bars here
+      </div>
     </div>
   );
-};
+}
 
 export default About;

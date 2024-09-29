@@ -1,25 +1,28 @@
 import React from 'react';
 
-const Contact = () => {
+function Contact({ theme }) {
   return (
-    <div className="text-[#d4d4d4]">
-      <h2 className="text-3xl font-bold mb-4 text-[#ff6b6b]">Contact Me</h2>
-      <p className="mb-4">
-        I'm always open to new opportunities and collaborations. Feel free to reach out to me!
-      </p>
-      <ul className="list-none">
-        <li className="mb-2">
-          <span className="font-bold">Email:</span> t.denmark@outlook.com
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">LinkedIn:</span> <a href="https://www.linkedin.com/in/yourprofile" className="text-[#007acc] hover:underline">linkedin.com/in/yourprofile</a>
-        </li>
-        <li className="mb-2">
-          <span className="font-bold">GitHub:</span> <a href="https://github.com/EngineerNoob" className="text-[#007acc] hover:underline">github.com/EngineerNoob</a>
-        </li>
-      </ul>
+    <div className={`p-6 ${theme === 'dark' ? 'text-[#d4d4d4]' : 'text-[#333333]'}`}>
+      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+      <form className="space-y-4">
+        // Enhance form fields with better styling
+        <input 
+          type="text" 
+          placeholder="Name" 
+          className="w-full p-2 bg-[#3c3c3c] border border-[#007acc] rounded"
+        />
+        // Add more form fields (email, message)
+        // ...
+        <button 
+          type="submit" 
+          className="px-4 py-2 bg-[#007acc] text-white rounded hover:bg-[#005999] transition-colors duration-200"
+        >
+          Send Message
+        </button>
+      </form>
+      // Add social media links or icons
     </div>
   );
-};
+}
 
 export default Contact;

@@ -1,14 +1,17 @@
 import React from 'react';
+// ... other imports ...
 
-const ActivityBar = () => {
+function ActivityBar({ theme }) {
     return (
-        <div className="w-12 bg-[#333333] flex flex-col items-center py-4">
-            <button className="mb-4 text-[#d4d4d4] hover:text-white">📁</button>
-            <button className="mb-4 text-[#d4d4d4] hover:text-white">🔍</button>
-            <button className="mb-4 text-[#d4d4d4] hover:text-white">📦</button>
-            <button className="mb-4 text-[#d4d4d4] hover:text-white">⚙️</button>
+        <div className={`w-12 flex-shrink-0 ${theme === 'dark' ? 'bg-[#333333]' : 'bg-[#2c2c2c]'}`}>
+            // Consider adding hover effects and tooltips
+            <button className="w-full p-2 hover:bg-[#1e1e1e] transition-colors duration-200">
+                <FileIcon className="w-6 h-6" />
+            </button>
+            // Add more activity buttons (e.g., search, git, extensions)
+            // ...
         </div>
     );
-};
+}
 
 export default ActivityBar;
