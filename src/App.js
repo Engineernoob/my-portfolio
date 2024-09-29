@@ -19,7 +19,7 @@ function App() {
         <div className={`flex flex-col h-screen ${theme === 'dark' ? 'bg-[#1e1e1e] text-[#d4d4d4]' : 'bg-white text-black'}`}>
             <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} theme={theme} toggleTheme={toggleTheme} />
             <div className="flex flex-1 overflow-hidden">
-                <ActivityBar theme={theme} />
+                <ActivityBar theme={theme} activeTab={activeTab} />
                 {sidebarOpen && <Sidebar setActiveTab={setActiveTab} theme={theme} />}
                 <div className="flex flex-col flex-1">
                     <TabBar tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} theme={theme} />
